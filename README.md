@@ -1,23 +1,23 @@
 # PROJECT MANAGEMENT TOOL - BACKEND
 
 
-1. OVERVIEW :
+ 1. OVERVIEW :
 
-    - The Project Management Tool backend is built with Node.js and Express.js, providing a powerful and flexible API for managing projects and tasks. This application supports user authentication, role-based access control, and efficient data management using MongoDB. The backend is designed to support a robust frontend built with React.js, facilitating a seamless project management experience.
+     - The Project Management Tool backend is built with Node.js and Express.js, providing a powerful and flexible API for managing projects and tasks. This application supports user authentication, role-based access control, and efficient data management using MongoDB. The backend is designed to support a robust frontend built with React.js, facilitating a seamless project management experience.
 
-2. FEATURES :
+ 2. FEATURES :
 
-    -  User Authentication: Secure user registration and login using JWT (JSON Web Tokens).
+    -  User Authentication: Secure user registration and login using JWT (JSON Web Tokens).      
 
-    -  Password Security: Passwords are hashed with Bcrypt before storage.
+    -  Password Security: Passwords are hashed with Bcrypt before storage.     
 
-    -  RESTful API: Full CRUD operations for managing projects and tasks.
+    -  RESTful API: Full CRUD operations for managing projects and tasks.      
  
-    -  Role-Based Access Control: Different access levels for managers and team members.
+    -  Role-Based Access Control: Different access levels for managers and team members.      
 
-    -  Data Storage: MongoDB for persistent data storage, including user profiles and project/task information.
+    -  Data Storage: MongoDB for persistent data storage, including user profiles and project/task information.     
 
-    -  Error Handling: Comprehensive error handling to ensure robust API responses.
+    -  Error Handling: Comprehensive error handling to ensure robust API responses.     
 
 3.TECH STACK :
 
