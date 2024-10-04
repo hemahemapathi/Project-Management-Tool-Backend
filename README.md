@@ -19,39 +19,39 @@
 
     -  Error Handling: Comprehensive error handling to ensure robust API responses.     
 
-3.TECH STACK :
+3. TECH STACK :
 
-   - Frontend: React.js (for reference, not included in this README)
+    - Frontend: React.js (for reference, not included in this README)
 
-   - Backend: Node.js, Express.js
+    - Backend: Node.js, Express.js
  
-   - Database: MongoDB
+    - Database: MongoDB
 
-   - Authentication: JWT, Bcrypt
+    - Authentication: JWT, Bcrypt
 
-4.INSTALLATION :
+4. INSTALLATION :
 
- Prerequisites
+   Prerequisites
  
-   - Node.js (v14 or later)
+    - Node.js (v14 or later)
      
-   - MongoDB (local installation or cloud service like MongoDB Atlas)
+    - MongoDB (local installation or cloud service like MongoDB Atlas)
     
-   - npm (comes with Node.js)
+    - npm (comes with Node.js)
     
-   - Set up environment variables: Create a .env file in the root directory and populate it with the following variables:
+    - Set up environment variables: Create a .env file in the root directory and populate it with the following variables:
 
-      _ PORT=5000
-      _ MONGODB_URI=your_mongodb_connection_string
-      _ JWT_SECRET=your_jwt_secret
+            _ PORT=5000
+            _ MONGODB_URI=your_mongodb_connection_string
+            _ JWT_SECRET=your_jwt_secret
   
-   - Replace your_mongodb_connection_string with your MongoDB connection string.
+    - Replace your_mongodb_connection_string with your MongoDB connection string.
   
-   - Choose a strong secret for JWT_SECRET.
+    - Choose a strong secret for JWT_SECRET.
 
-5. The server will run at http://localhost:3000
+5.  The server will run at http://localhost:3000
 
-6. API ENDPOINTS  :
+6.  API ENDPOINTS  :
  
     a. Authentication :
 
@@ -76,13 +76,13 @@
    
       1) GET /api/projects
 
-          - Retrieve all projects (managers only).
+           - Retrieve all projects (managers only).
      
       2) POST /api/projects
 
-         - Create a new project.
+          - Create a new project.
 
-         - Request Body:
+          - Request Body:
             { 
                   "title": "Project Title", 
                   "description": "Project Description", 
@@ -92,13 +92,13 @@
       
       3) GET /api/projects/
 
-         - Retrieve a specific project by ID.
+          - Retrieve a specific project by ID.
 
       5) PUT /api/projects/
 
-          - Update a project by ID.
+           - Update a project by ID.
 
-          - Request Body:
+           - Request Body:
             { 
                  "title": "Updated Title", 
                  "description": "Updated Description" 
@@ -106,19 +106,19 @@
       
       6) DELETE /api/projects/
 
-          - Delete a project by ID.
+           - Delete a project by ID.
    
     c. Tasks :
 
       1) GET /api/tasks
 
-          - Retrieve all tasks (accessible to team members and managers).
+           - Retrieve all tasks (accessible to team members and managers).
 
       2) POST /api/tasks
 
-          - Create a new task.
+           - Create a new task.
 
-          - Request Body:
+           - Request Body:
             { 
                 "projectId": "project_id", 
                 "title": "Task Title", 
@@ -128,55 +128,55 @@
 
       3) GET /api/tasks/
 
-          - Retrieve a specific task by ID.
+           - Retrieve a specific task by ID.
 
      7) PUT /api/tasks/
 
-         - Update a task by ID.
+           - Update a task by ID.
 
      9) DELETE /api/tasks/
 
-         - Delete a task by ID.
+           - Delete a task by ID.
 
-7.ROLE-BASED-ACCESS :
+7.  ROLE-BASED-ACCESS :
 
- Manager Access:
+    Manager Access:
    
-   -   Managers have full access to all features in the system.
+      -   Managers have full access to all features in the system.
    
-   -   They can perform CRUD (Create, Read, Update, Delete) operations on all tasks and data.
+      -   They can perform CRUD (Create, Read, Update, Delete) operations on all tasks and data.
    
-   -   Responsible for performing tasks not assigned to other users.
+      -   Responsible for performing tasks not assigned to other users.
    
-   -   Can view and generate reports.
+      -   Can view and generate reports.
 
-Team Member Access:
+    Team Member Access:
 
-   -   Team Members can only access tasks that have been assigned to them.
+      -   Team Members can only access tasks that have been assigned to them.
   
-   -   They can view and update their own tasks but cannot create or delete tasks.
+      -   They can view and update their own tasks but cannot create or delete tasks.
   
-   -   Can view and generate reports, similar to Managers, but without broader administrative capabilities.
+      -   Can view and generate reports, similar to Managers, but without broader administrative capabilities.
 
 8. SECURITY :
 
-   -   JWT Authentication: Utilized to ensure that users can only access resources they are authorized for. Tokens are issued upon login and must be included in the headers of subsequent requests.
+      -   JWT Authentication: Utilized to ensure that users can only access resources they are authorized for. Tokens are issued upon login and must be included in the headers of subsequent requests.
 
-   -   Password Hashing: Bcrypt is used to hash passwords before storing them in the database, enhancing security.
+      -   Password Hashing: Bcrypt is used to hash passwords before storing them in the database, enhancing security.
 
-   -   Role-Based Access Control: Middleware restricts access to certain routes based on user roles, ensuring that managers and team members have appropriate permissions.
+      -   Role-Based Access Control: Middleware restricts access to certain routes based on user roles, ensuring that managers and team members have appropriate permissions.
 
-10. ERROR HANDLING :
+10.  ERROR HANDLING :
  
-   -   Comprehensive error handling is implemented throughout the API to return clear and consistent error messages, making it easier for clients to understand issues.
+      -   Comprehensive error handling is implemented throughout the API to return clear and consistent error messages, making it easier for clients to understand issues.
 
 10. TESTING :
 
-   -   Unit tests can be added using frameworks such as Jest or Mocha to ensure that the API functions as expected. Testing endpoints is encouraged to maintain code quality.
+      -   Unit tests can be added using frameworks such as Jest or Mocha to ensure that the API functions as expected. Testing endpoints is encouraged to maintain code quality.
 
 11. LICENSE :
  
-   -   This project is licensed under the MIT License. See the LICENSE file for details.
+      -   This project is licensed under the MIT License. See the LICENSE file for details.
 
 12. ACKNOWLEDMENT :
  
