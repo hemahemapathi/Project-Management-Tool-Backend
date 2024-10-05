@@ -3,9 +3,13 @@
 
  1. OVERVIEW :
 
-     - The Project Management Tool backend is built with Node.js and Express.js, providing a powerful and flexible API for managing projects and tasks. This application supports user authentication, role-based access control, and efficient data management using MongoDB. The backend is designed to support a robust frontend built with React.js, facilitating a seamless project management experience.
+     - The Project Management Tool backend is built with Node.js and Express.js, providing a powerful and flexible API for managing projects and tasks.
 
- 2. FEATURES :
+     -  This application supports user authentication, role-based access control, and efficient data management using MongoDB.
+
+     -  The backend is designed to support a robust frontend built with React.js, facilitating a seamless project management experience.
+
+ 3. FEATURES :
 
     -  User Authentication: Secure user registration and login using JWT (JSON Web Tokens).      
 
@@ -19,7 +23,7 @@
 
     -  Error Handling: Comprehensive error handling to ensure robust API responses.     
 
-3. TECH STACK :
+4. TECH STACK :
 
     - Frontend: React.js (for reference, not included in this README)
 
@@ -29,7 +33,7 @@
 
     - Authentication: JWT, Bcrypt
 
-4. INSTALLATION :
+5. INSTALLATION :
 
    Prerequisites
  
@@ -49,62 +53,81 @@
   
     - Choose a strong secret for JWT_SECRET.
 
-5.  The server will run at http://localhost:3000
+6.  The server will run at http://localhost:3000
 
-6.  API ENDPOINTS  :
+7.  API ENDPOINTS  :
  
     a. Authentication :
 
       1) POST /api/auth/register
 
-            - Register a new user.
+            -  Register a new user.
 
-            - Request Body:
-              { 
-                 "email": "user@example.com", 
-                 "password": "yourpassword", 
-                 "role": "manager/team_member" 
-              }
+            -  Request Body:
+
+                   {
+               
+                   "email": "user@example.com", 
+  
+                   "password": "yourpassword", 
+
+                   "role": "manager/team_member" 
+
+                   }
       
-      3) POST /api/auth/login
-             { 
-                 "email": "user@example.com", 
-                 "password": "yourpassword" 
-             }
+      3)  POST /api/auth/login
+
+                 {    
+         
+                    "email": "user@example.com", 
+
+                    "password": "yourpassword" 
+
+                 }
          
     b. Projects :
    
       1) GET /api/projects
 
-           - Retrieve all projects (managers only).
+            -  Retrieve all projects (managers only).
      
       2) POST /api/projects
 
-          - Create a new project.
+            -  Create a new project.
 
-          - Request Body:
-            { 
-                  "title": "Project Title", 
-                  "description": "Project Description", 
-                  "deadline": "YYYY-MM-DD", 
-                  "category": "Project Category" 
-            }
+            -  Request Body :
+
+                   {   
+
+                    "title": "Project Title", 
+
+                    "description": "Project Description", 
+
+                    "deadline": "YYYY-MM-DD", 
+
+                    "category": "Project Category" 
+          
+                   }
       
-      3) GET /api/projects/
+      4) GET /api/projects/
 
-          - Retrieve a specific project by ID.
+           -  Retrieve a specific project by ID.
 
       5) PUT /api/projects/
 
-           - Update a project by ID.
+           -  Update a project by ID.
 
-           - Request Body:
-            { 
-                 "title": "Updated Title", 
-                 "description": "Updated Description" 
-            }
+           -  Request Body:
+          
+                  { 
+  
+                    "title": "Updated Title", 
+
+                    "description": "Updated Description" 
+
+                  }
       
-      6) DELETE /api/projects/
+      7) DELETE /api/projects/
 
            - Delete a project by ID.
    
@@ -119,14 +142,20 @@
            - Create a new task.
 
            - Request Body:
-            { 
-                "projectId": "project_id", 
-                "title": "Task Title", 
-                "description": "Task Description", 
-                "deadline": "YYYY-MM-DD" 
-            }
+          
+                  { 
 
-      3) GET /api/tasks/
+                      "projectId": "project_id", 
+
+                      "title": "Task Title", 
+
+                      "description": "Task Description", 
+
+                      "deadline": "YYYY-MM-DD" 
+
+                   }
+
+      4) GET /api/tasks/
 
            - Retrieve a specific task by ID.
 
@@ -138,7 +167,7 @@
 
            - Delete a task by ID.
 
-7.  ROLE-BASED-ACCESS :
+8.  ROLE-BASED-ACCESS :
 
     Manager Access:
    
@@ -158,9 +187,10 @@
   
       -   Can view and generate reports, similar to Managers, but without broader administrative capabilities.
 
-8. SECURITY :
+9. SECURITY :
 
-      -   JWT Authentication: Utilized to ensure that users can only access resources they are authorized for. Tokens are issued upon login and must be included in the headers of subsequent requests.
+      -   JWT Authentication: Utilized to ensure that users can only access resources they are authorized for. Tokens are issued upon login and must be included in the headers of
+  subsequent requests.
 
       -   Password Hashing: Bcrypt is used to hash passwords before storing them in the database, enhancing security.
 
