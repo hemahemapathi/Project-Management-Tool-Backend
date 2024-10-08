@@ -20,4 +20,8 @@ app.use('/api/task',taskRouter);
 app.use('/api/report', reportRoutes);
 app.use('/api/team',teamRoutes);
 
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
 export default app;
